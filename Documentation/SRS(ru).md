@@ -33,10 +33,15 @@
 Фреймворки: VueJS, Spring.
  # 3. Требования к интерфейсу
   ## 3.1 Пользовательский интерфейс
+  Начальная страница, откуда можно осуществить поиск по ID игрока, матчу или никнейму.
   ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Start%20page.png)
+  Результат поиска по нейкнейму.
   ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Search%20by%20nickname%20result%20page.PNG)
+  Статистика конкретного игрока.
   ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Player%20statistics%20page.png)
+  Статистика игрового матча.
   ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Match%20statistics%20page.PNG)
+  Отображение графиков соответствующего матча.
   ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Graphs%20page.PNG)
  
 
