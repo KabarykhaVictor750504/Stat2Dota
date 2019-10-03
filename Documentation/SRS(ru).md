@@ -34,7 +34,10 @@
  # 3. Требования к интерфейсу
   ## 3.1 Пользовательский интерфейс
   ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Start%20page.png)
-  
+  ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Search%20by%20nickname%20result%20page.PNG)
+  ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Player%20statistics%20page.png)
+  ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Match%20statistics%20page.PNG)
+  ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Graphs%20page.PNG)
  
 
 
