@@ -43,7 +43,7 @@
   
   ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Start%20page.png)
   
-  Результат поиска по нейкнейму.
+  Результат поиска по никнейму.
   
   ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Search%20by%20nickname%20result%20page.PNG)
   
