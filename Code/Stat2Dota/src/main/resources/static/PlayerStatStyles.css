@@ -1,0 +1,90 @@
+a:link, a:visited {
+    color: rgb(228,163,9);
+    font-size: 15px; 
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(187,82,14);
+}
+
+body {
+    height: auto;
+    margin: 0;
+    background-image: url(images/Dotka.jpg);
+    background-size: cover;
+}
+
+legend {
+    font-family: "helvetica";
+    color: rgb(228,163,9);
+    font-size: 130%;
+    margin-left: 6%;
+}
+
+fieldset {
+    width: 85%;
+    height: 440px;
+    margin: auto;
+    margin-top: 3%;
+    border-color: rgb(187,82,14);
+}
+
+span {
+    font-family: "helvetica";
+    color: rgb(228,163,9);
+    font-size: 2em;
+    display: inline-block;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+table {
+    background-color: rgb(15,15,15); 
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tableScroll {
+    overflow: hidden;
+    overflow-y: scroll;
+    height: 95%;
+}
+
+td,th {
+    border: 1px solid rgb(187,82,14);
+}
+
+td {
+    text-align: center;
+    font-family: "consolas";
+    color: rgb(228,163,9);
+    font-size: 100%;    
+    width: 10%;
+    height: 30px;
+}
+
+th {
+    font-family: "helvetica";
+    color: rgb(228,163,9);
+    font-size: 150%;    
+    text-align: left;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: rgb(45,45,45);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }

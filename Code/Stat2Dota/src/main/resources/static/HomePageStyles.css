@@ -1,0 +1,40 @@
+h1 {
+    color: rgb(61,31,41);
+    font-family: "segoe print";
+    font-size: 60px;
+    margin-left: 20px;
+    margin-bottom: 50px;
+}
+
+input[type=submit] {
+    background-color: transparent;
+    overflow: hidden;
+    outline: none;
+    border: none;
+    color:  rgb(34,19,24);
+    font-size: 30px;
+    font-family: "comic sans ms";
+    display: block;
+}
+
+input[type=submit]:hover {
+    color: rgb(61,31,41);
+}
+
+body {
+    height: auto;
+    margin: 0;
+    background-image: url(images/Lanaya.jpg);
+    background-size: cover;
+}
+
+input {
+    font-family: "comic sans ms";
+    color: rgb(34,19,24);
+    margin-left: 20px;
+    font-size: 20px;    
+}
+
+td {
+    height: 50px;
+}

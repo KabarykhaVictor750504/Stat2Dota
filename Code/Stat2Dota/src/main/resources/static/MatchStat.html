@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="MatchStatStyles.css" type="text/css">
+        <title>Stat2Dota</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+        <span class="floatLeft">Radiant: {{radiantScore}}</span>
+        <span class="floatRight"> Dire: {{direScore}}</span>
+        <h1>{{radiantWin}}</h1>
+        <h2>{{strip(Duration/60)+':'+strip(Duration%60)}}</h2>
+        <fieldset>
+            <table>
+                <caption>Radient</caption>
+                <thead>
+                    <tr>
+                        <th>Hero</th>
+                        <th>Player</th>
+                        <th>K D A</th>
+                        <th>Networse</th>
+                        <th title="kill/deny for creeps">K D</th>
+                        <th>GPM</th>
+                        <th>XPM</th>
+                        <th>Damage</th>
+                        <th>Inventory</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for="radiantPlayer in radiantPlayers">
+                        <td><img v-bind:src="radiantPlayer.hero_id" alt="Hero image" width="70px" height="auto"></td>
+                        <td>{{radiantPlayer.nickName}}</td>
+                        <td>{{radiantPlayer.kills+'/'+radiantPlayer.deaths+'/'+radiantPlayer.assists}}</td>
+                        <td>{{radiantPlayer.netWorse}}</td>
+                        <td>{{radiantPlayer.last_hits+'/'+radiantPlayer.denies}}</td>
+                        <td>{{radiantPlayer.GPM}}</td>
+                        <td>{{radiantPlayer.XPM}}</td>
+                        <td>{{radiantPlayer.hero_damage}}</td>
+                        <td><table>
+                            <tr v-for = "radiantPlayer in direPlayers">
+                                {{radiantPlayer.hero_inventory}}
+                            </tr>
+                        </table></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>               
+                <caption>Dire</caption>
+                    <thead>
+                        <tr>
+                            <th>Hero</th>
+                            <th>Player</th>
+                            <th>K D A</th>
+                            <th>Networse</th>
+                            <th>K D</th>
+                            <th>GPM</th>
+                            <th>XPM</th>
+                            <th>Damage</th>
+                            <th>Inventory</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    <tr v-for="direPlayer in direPlayers">
+                        <td><img v-bind:src="direPlayer.hero_id" alt="Hero image" width="70px" height="auto"></td>
+                        <td>{{direPlayer.nickName}}</td>
+                        <td>{{direPlayer.kills+'/'+direPlayer.deaths+'/'+direPlayer.assists}}</td>
+                        <td>{{direPlayer.netWorse}}</td>
+                        <td>{{direPlayer.last_hits+'/'+direPlayer.denies}}</td>
+                        <td>{{direPlayer.GPM}}</td>
+                        <td>{{direPlayer.XPM}}</td>
+                        <td>{{direPlayer.hero_damage}}</td>
+                        <td><table>
+                            <tr v-for = "direPlayer in direPlayers">
+                                    {{direPlayer.hero_inventory}}
+                            </tr>
+                        </table></td>
+                    </tr>
+                    </tbody>
+                </table>
+        </fieldset>
+            <a v-bind:href="graphStringHandler(ID)" title="WHAT GRAPHS?????">Graphs</a>
+        </div>
+        <script src="PlayerStatTable.js"></script>
+    </body>
+</html>

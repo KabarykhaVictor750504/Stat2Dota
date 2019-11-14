@@ -1,0 +1,50 @@
+body {
+     height: auto;
+     margin: 0;
+     background-image: url(images/Dotka.jpg);
+     background-size: cover;
+     background-attachment: fixed;
+ }
+
+figcaption {
+    float: right;
+    margin-right: 30px;
+    margin-top: 20px;
+}
+
+span {
+    font-family: "comic sans ms";
+    color: rgb(228,163,9);
+    font-size: 2.6em;    
+    display: inline-block;
+    margin-top: 3%;
+    margin-left: 5%;
+}
+
+table {
+    margin-left: 10%;
+    width: 85%;
+}
+
+td {
+    font-family: "comic sans ms";
+    color: rgb(228,163,9);
+    font-size: 1.5em;
+}
+
+button {
+    background:none;
+    border: none;
+    font-family: "comic sans ms";
+    color: rgb(228,163,9);
+    font-size: 1em;
+}
+
+button:hover {
+    color: red;
+}
+
+button:focus {
+    border:none;
+outline: none;
+}

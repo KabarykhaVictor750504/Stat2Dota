@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="ListOfPlayersStyles.css" type="text/css">
+        <title>Stat2Dota</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    </head>
+    <body>
+        <div id="app">
+            <span>Search results for "{{ID}}":</span>
+            <table>
+                <tbody>
+                    <tr v-for="play in plays"> <!-- v-for="item in items"-->
+                        <td>
+                            <figure>
+                                <figcaption><button v-bind:name="play.first.accountID" onclick="window.location='PlayerStat.html?cmd=2&inf='+name">{{play.first.nickName}}</button></figcaption>
+                                <img v-bind:src="play.first.avatarURL" alt="Player avatar" width="150px" height="auto">
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <figcaption><button v-bind:name="play.second.accountID" onclick="window.location='PlayerStat.html?cmd=2&inf='+name">{{play.second.nickName}}</button></figcaption>
+                                <img v-bind:src="play.second.avatarURL" alt="Player avatar" width="150px" height="auto">
+                            </figure>
+                        </td>
+                        <td>
+                            <figure>
+                                <figcaption><button v-bind:name="play.third.accountID" onclick="window.location='PlayerStat.html?cmd=2&inf='+name">{{play.third.nickName}}</button></figcaption>
+                                <img v-bind:src="play.third.avatarURL" alt="Player avatar" width="150px" height="auto">
+                            </figure>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div> 
+        <script src="PlayerStatTable.js"></script>
+    </body>
+</html>

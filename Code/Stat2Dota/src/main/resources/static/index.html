@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="HomePageStyles.css" type="text/css">
+        <title>Stat2Dota</title>        
+    </head>
+    <body>
+        <h1>STAT2DOTA</h1>
+
+        <table>
+            <tr>
+                <td><input type="text" id="Nickname" placeholder="Nickname" name="Nickname"></td> 
+                <!--<td><a href="SearchNickname.html" title="Search Player by Nickname">Search</a></td>-->
+                <td><input type="button" onclick="handler(1)" value="search"></td>
+            </tr>
+            <tr>
+                <td><input type="text" id="PlayerID" placeholder="PlayerID"></td>
+                <!--<td><a href="PlayerStat.html" title="Search Player by his ID"> Search</a></td>-->
+                <td><input type="button" onclick="handler(2)" value="search"></td>
+            </tr>
+            <tr>           
+                <td><input type="text" id="MatchID" placeholder="MatchID"></td>
+                <!--<td><a href="MatchStat.html" title="Search match by ID"> Search</a></td>-->
+                <td><input type="button" onclick="handler(3)" value="search"></td>
+            </tr>
+        </table>
+       <script>
+           function handler(cmd){
+                switch (cmd) {
+                    case 1: {
+                        var value = document.getElementById("Nickname").value
+                        var url = 'ListOfPlayers.html?cmd=' + cmd + '&inf=' + value
+                        location.href = url
+                        break
+                    }
+                    case 2: {
+                        var value = document.getElementById("PlayerID").value
+                        location.href = 'PlayerStat.html?cmd=' + cmd + '&inf=' + value
+                        break
+                    }
+                    case 3: {
+                        var value = document.getElementById("MatchID").value
+                        location.href = 'MatchStat.html?cmd=' + cmd + '&inf=' + value
+                        break
+                    }
+                }
+           }
+       </script>
+    </body>
+</html>

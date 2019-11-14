@@ -1,0 +1,116 @@
+a {
+    text-decoration: none;
+    display: block;
+    position: absolute;
+    left: 50%;
+    margin-left: -55px;
+    margin-top: 50px;
+    width: 110px;
+    padding: 8px 12px;
+    text-transform: uppercase;
+    border: 1px solid;
+    color: rgb(228,163,9);
+    box-sizing: border-box;
+  }
+  a:before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 10px;
+    border-top: 1px solid;
+    border-left: 1px solid
+  }
+  a:after{
+    content: "";
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 10px;
+    height: 20px;
+    border-bottom: 1px solid;
+    border-right: 1px solid
+  }
+  a:hover:before {
+    width: 10px;
+    height: 20px;
+    color: rgb(187,82,14);
+  }
+  a:hover:after {
+    width: 20px;
+    height: 10px;
+    color: rgb(187,82,14);
+  }
+  a:hover {
+      color: rgb(187,82,14);
+  }
+
+body {
+    height: auto;
+    margin: 0;
+    background-image: url(images/Dotka.jpg);
+    background-size: cover;
+}
+
+fieldset {
+    width: 85%;
+    height: 620px;
+    margin: auto;
+    margin-top: 3%;
+    border-color: rgb(187,82,14);
+}
+
+.floatLeft {
+    float: left;
+    margin-left: 2%;
+}
+
+.floatRight {
+    float: right;
+    margin-right: 2%;
+}
+
+h1,h2 {   
+    font-family: "helvetica";
+    color: rgb(228,163,9);
+    font-size: 3em;
+    text-align: center;
+    clear: both;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+span,caption {
+    font-family: "helvetica";
+    color: rgb(228,163,9);
+    font-size: 1.5em;
+    margin-top: 2%;
+    text-align: left;
+}
+
+table {
+    background-color: rgb(15,15,15);
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    font-family: "helvetica";
+    color: rgb(228,163,9);
+    font-size: 1em;
+    text-align: center;
+}
+
+th {
+    font-family: "helvetica";
+    color: rgb(228, 0, 37);
+    font-size: 1em;
+    text-align: center;
+}
+
+caption {
+    color:rgb(187,82,14);
+}

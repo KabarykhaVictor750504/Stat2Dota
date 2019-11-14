@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Networse</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="Graphs.css">
+</head>
+<body>
+<div class="wrapper">
+    <h1>Changes between teams in gold/experience</h1>
+    <h2>Radiant above zero / Dire below zero</h2>
+
+    <canvas id="myChart" width="1600" height="900"></canvas>
+</div>
+<div class="wrapper1">
+    <h1>Changes between heroes in gold</h1>
+
+    <canvas id="myChart1" width="1600" height="900"></canvas>
+</div>
+<div class="wrapper2">
+    <h1>Changes between heroes in experience</h1>
+
+    <canvas id="myChart2" width="1600" height="900"></canvas>
+</div>
+<script src="PlayerStatTable.js"></script>
+</body>
+</html>

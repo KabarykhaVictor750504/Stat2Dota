@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:v-bind="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="PlayerStatStyles.css" type="text/css">
+        <title>Stat2Dota</title>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+    </head>
+    <body>
+
+        <div id="app">
+            <span>Nickname: {{nickname}}</span>
+            <span>Victories: {{win}}</span>
+            <span>Defeats: {{lose}}</span>
+            <span>Winrate: {{strip(winrate)+'%'}}</span>
+            <fieldset>
+                <legend>Player Stats</legend>
+                <div class="tableScroll">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hero</th>
+                                <th>Result</th>
+                                <th>Type</th>
+                                <th>Duration</th>
+                                <th>KDA</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr v-for="match in matches">
+                                <td><img v-bind:src="match.heroId" alt="Hero image" width="70px" height="auto"></td>
+                                <td>{{match.radiantWin}}</td>
+                                <td>{{match.lobbyType}}</td>
+                                <td>{{strip(match.duration/60)+':'+strip(match.duration%60)}}</td>
+                                <td>{{match.kills+'/'+match.deaths+'/'+match.assists}}</td>
+                                <td><input type="button" v-bind:name="match.matchID" onclick="handler(name)" value="View"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </fieldset> 
+        </div>
+        <script src="PlayerStatTable.js"></script>
+    <script>
+        function handler(param) {
+            var url = 'MatchStat.html?cmd=' + 3 + '&inf=' + param
+            location.href = url
+        }
+    </script>
+    </body>
+</html>
