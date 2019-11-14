@@ -73,7 +73,7 @@
   
   Статистика игрового матча.
   
-  ![](https://github.com/ParkhomenkoArtyom750504/Dotabuff/blob/master/Mockups/Match%20statistics%20page.PNG)
+  ![](https://github.com/ParkhomenkoArtyom750504/Stat2Dota/blob/master/Mockups/Match%20statistics%20page.png)
   
   Отображение графиков соответствующего матча.
   
